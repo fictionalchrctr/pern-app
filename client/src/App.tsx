@@ -5,7 +5,12 @@ function App() {
     <>
       <div>
         <form action="">
-          <h1>GTA 6 - Оставь заявку</h1>
+          <form action="">
+            <h1>GTA 6 - Оставь заявку</h1>
+            <input type="email" placeholder="Введите email" />
+            <input type="name" placeholder="Введите имя" />
+            <button>Отправить заявку!</button>
+          </form>
         </form>
       </div>
     </>
