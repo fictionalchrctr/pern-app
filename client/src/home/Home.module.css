@@ -3,7 +3,7 @@
 }
 
 .wrapper > form {
-  @apply w-max p-3 absolute left-5 top-5;
+  @apply w-max p-3 absolute left-20 top-5;
   animation: fade 1s ease-in-out;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .wrapper > form > input {
-  @apply block mb-3 py-3 px-3 rounded-2xl w-full border border-transparent 
+  @apply block mb-3  py-3 px-3 rounded-2xl w-full border border-transparent 
   bg-black/30 placeholder:text-white/70 outline-none duration-500;
 }
 
@@ -34,6 +34,10 @@
 .success {
   @apply text-green-400 text-2xl font-medium m-auto;
   animation: fade 0.4s;
+}
+
+.error {
+  @apply block mx-2 mb-4 text-sm;
 }
 
 @keyframes fade {
