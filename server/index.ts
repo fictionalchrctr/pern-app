@@ -13,6 +13,21 @@ app.post('/api', async (req, res) => {
   if (!email || !name) {
     return res.status(400).json({ message: 'Email and name required fields!' })
   }
+
+  try {
+    const createdRow = await prisma.waitList.create({
+      data: {
+        email,
+        name,
+      },
+    })
+    // какие поля вернуть в ответ
+    res.json(createdRow)
+  } catch (error) {
+    res.status(500).json({
+      message: 'На сервере произошла ошибка. Попробуйте позже!',
+    })
+  }
 })
 
 const server = app.listen(PORT, () => {
